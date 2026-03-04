@@ -13,10 +13,9 @@ COPY . .
 # When building this container in Cloud Build, ensure you pass --build-arg VITE_WS_URL=... and --build-arg VITE_API_URL=...
 # Or have them in your .env.production file.
 # For Cloud Run, you can also inject them by modifying the build pipeline.
-ARG VITE_WS_URL
-ARG VITE_API_URL
-ENV VITE_WS_URL=$VITE_WS_URL
-ENV VITE_API_URL=$VITE_API_URL
+# Reemplaza las líneas de ARG por estas de ENV con tus URLs reales
+ENV VITE_WS_URL=wss://mindo-live-proxy-612302142321.us-central1.run.app
+ENV VITE_API_URL=https://mindo-live-proxy-612302142321.us-central1.run.app
 
 RUN npm run build
 
