@@ -113,7 +113,7 @@ export function useLiveAPI({
     const disconnect = useCallback(() => {
         if (wsRef.current) {
             // Trigger session end metrics first
-            if (isConnected && startTimeRef.current > 0) {
+            if (startTimeRef.current > 0) {
                 const durationSeconds = Math.floor(Date.now() / 1000) - startTimeRef.current;
                 onSessionEndRef.current?.({
                     durationSeconds,
