@@ -241,13 +241,13 @@ PIZARRA VIRTUAL:
                                         },
                                         {
                                             name: "draw_concept",
-                                            description: "Draws an animal, object, or concept in the middle of the whiteboard as a giant Emoji or Icon.",
+                                            description: "Draws an animal, object, or concept in the middle of the whiteboard as giant Emojis. You can draw multiple items by sending multiple emojis.",
                                             parameters: {
                                                 type: "OBJECT",
                                                 properties: {
                                                     concept_emoji: {
                                                         type: "STRING",
-                                                        description: "A single unicode emoji representing the requested animal, object, or concept (e.g., 🐘, 🍎, 🌎)."
+                                                        description: "One or more unicode emojis representing the requested animal, object, or concept (e.g., 🐘, 🍎🍎, ⭐⭐⭐)."
                                                     }
                                                 },
                                                 required: ["concept_emoji"]

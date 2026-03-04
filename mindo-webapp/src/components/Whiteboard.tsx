@@ -225,7 +225,7 @@ export default function Whiteboard({ activeBackground = 'blank', activeConcept =
                     {/* Concept Overlay (Mindo draws this) */}
                     {activeConcept && (
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[25] overflow-hidden p-4">
-                            <div className="relative animate-in zoom-in spin-in-1 duration-500 text-[8rem] sm:text-[12rem] md:text-[16rem] drop-shadow-2xl opacity-90 select-none">
+                            <div className="relative animate-in zoom-in spin-in-1 duration-500 text-[6rem] sm:text-[8rem] md:text-[10rem] drop-shadow-2xl opacity-90 select-none flex flex-wrap justify-center items-center text-center gap-2 max-w-[90vw] leading-none">
                                 {activeConcept}
                             </div>
                         </div>
