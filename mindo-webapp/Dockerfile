@@ -1,9 +1,9 @@
 # Build Stage
-FROM node:18-alpine as builder
+FROM node:20-alpine as builder
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy only package.json to force a fresh install of native bindings (ignores local Windows package-lock.json)
+COPY package.json ./
 RUN npm install
 
 # Copy application code
