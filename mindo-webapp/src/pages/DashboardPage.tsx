@@ -121,7 +121,8 @@ export default function DashboardPage({ user }: DashboardProps) {
       if (!profile.profile_id) throw new Error("No profile id");
       const sessions = await getRecentSessions(profile.profile_id, 20);
 
-      const response = await fetch('http://localhost:8080/api/reports/generate', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/reports/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

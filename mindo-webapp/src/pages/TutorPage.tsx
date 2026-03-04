@@ -23,7 +23,7 @@ export default function TutorPage() {
         isConnected, botState, botEmotion, audioLevel, stream,
         connect, disconnect, activeBackground, activeConcept, activeReadingText, clearBoardTrigger, clearConcept
     } = useLiveAPI({
-        url: 'ws://localhost:8080', // Replace with dynamic URL later if needed
+        url: import.meta.env.VITE_WS_URL || 'ws://localhost:8080', // Uses environment variable for production
         onMemoryExtracted: (fact) => {
             if (childId) {
                 profileService.addMemory(childId, fact).catch(err => console.error("Error saving memory:", err));
